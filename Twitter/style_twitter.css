@@ -1,0 +1,40 @@
+body {
+  padding-left: 150px;
+  padding-right: 150px;
+  font-family: Helvetica;
+
+
+}
+
+
+.borderless {
+  border:0px;
+}
+
+td {
+  border: 0px;
+}
+
+
+.card:hover {
+  background-color: #FBFBFB;
+}
+
+.unfollowbutton:hover{
+  background-color: #F4C5D6;
+}
+
+.unfollowbutton .comment {
+  display: none;
+
+}
+
+.unfollowbutton:hover .replies {
+  display: none;
+}
+
+.unfollowbutton:hover .comment {
+  display: inline;
+  color:red;
+
+}

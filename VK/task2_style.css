@@ -1,0 +1,176 @@
+body {
+  margin: 0px;
+  font-family: Helvetica;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #edeef0;
+}
+
+.main_inside {
+  background-color: #edeef0;
+}
+
+.header {
+  background-color: white;
+  display: flex;
+  padding: 10px 20px;
+  margin: 0px;
+  padding-left: 250px;
+  padding-right: 250px;
+}
+
+.logo {
+  width: 25%;
+}
+
+.logo a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.search {
+  width: 50%;
+}
+
+.search input {
+  background-color: #edeef0;
+  border: 0px;
+  border-radius: 5px;
+  padding: 5px 80px 5px 10px;
+}
+
+.logout {
+  width: 25%;
+}
+
+.logout {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.logout p {
+  display: inline;
+  margin: 0px;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+
+.logout img {
+  width: 10%;
+  border-radius: 50%;
+}
+
+.content {
+  background-color: #edeef0;
+  min-height: 800px;
+  display: flex;
+  flex-direction: row;
+  padding-left: 250px;
+  padding-right: 250px;
+}
+
+.sidebar {
+  width: 25%;
+  margin-top: 20px;
+}
+
+.sidebar_hr {
+  width: 60%;
+  text-align: center;
+  border: 0.3px solid grey;
+}
+
+.common_hr {
+  width: 100%;
+  text-align: center;
+  border: 0.3px solid grey;
+}
+
+.my_friends {
+  width: 50%;
+  background-color: white;
+  margin-top: 20px;
+  min-height: 500px;
+}
+
+.find_friends {
+  padding-left: 10px;
+}
+
+.find_friends input {
+  border: 0px;
+  padding-left: 10px;
+}
+
+.friendsTable {
+  padding-top: 0px;
+  padding-left: 10px;
+}
+
+.friendsTable {
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+.friendsPhoto {
+  width: 80px;
+  border-radius: 50%;
+  padding-right: 0px;
+}
+
+.friendsmessage {
+  font-size: 15px;
+  color: grey;
+}
+
+.directmessage {
+  font-size: 15px;
+  color: darkblue;
+}
+
+.first_td {
+  padding-right: 0px;
+}
+
+.second_td {
+  padding-left: 0px;
+}
+
+.friendsCol {
+  padding-left: 0px;
+}
+
+.column_three {
+  width: 25%;
+  margin-top: 20px;
+  min-height: 500px;
+  margin-left: 20px;
+}
+
+.references {
+  padding-top: 0px;
+  background-color: white;
+}
+
+.references i, span {
+  color: darkblue;
+  padding-left: 10px;
+  font-size: 12px;
+}
+
+.possible_friends {
+  margin-top: 20px;
+  min-height: 200px;
+  background-color: white;
+  font-size: 15px;
+}

@@ -1,0 +1,223 @@
+body {
+  margin: 0px;
+  font-family: Helvetica;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #edeef0;
+}
+
+.main_inside {
+  background-color: #edeef0;
+}
+
+.header {
+  background-color: white;
+  display: flex;
+  padding: 10px 20px;
+  margin: 0px;
+  padding-left: 250px;
+  padding-right: 250px;
+}
+
+.logo {
+  width: 25%;
+}
+
+.logo a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.search {
+  width: 50%;
+}
+
+.search input {
+  background-color: #edeef0;
+  border: 0px;
+  border-radius: 5px;
+  padding: 5px 80px 5px 10px;
+}
+
+.logout {
+  width: 25%;
+}
+
+.logout {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.logout p {
+  display: inline;
+  margin: 0px;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+
+.logout img {
+  width: 10%;
+  border-radius: 50%;
+}
+
+.content {
+  background-color: #edeef0;
+  min-height: 500px;
+  display: flex;
+  flex-direction: row;
+  padding-left: 250px;
+  padding-right: 250px;
+}
+
+.sidebar {
+  width: 25%;
+  margin-top: 20px;
+}
+
+.sidebar_hr {
+  width: 60%;
+  text-align: center;
+  border: 0.3px solid grey;
+}
+
+.common_hr {
+  width: 100%;
+  text-align: center;
+  border: 0.3px solid grey;
+}
+
+.profile {
+  width: 25%;
+}
+
+.profile_image img {
+  margin-bottom: 0px;
+}
+
+.profile_first_block {
+  background-color: white;
+  margin-top: 20px;
+}
+
+.profile_first_block div {
+  padding: 5px 10px;
+}
+
+.edit_box {
+  border-radius: 50%;
+}
+
+.edit_box p {
+  background-color: #edeef0;
+  padding: 7px;
+  margin-top: 0px;
+  border-radius: 5px;
+}
+
+.statistics {
+  padding-top: 0px;
+}
+
+.statistics i, span {
+  color: grey;
+  padding-left: 10px;
+}
+
+.profile_warning {
+  background-color: white;
+  margin-top: 20px;
+  padding: 15px;
+}
+
+.profile_warning span {
+  color: grey;
+}
+
+.my_friends {
+  background-color: white;
+  margin-top: 20px;
+}
+
+.my_friends_all_table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.friends_image {
+  border-radius: 50%;
+  display: block;
+  width: 50px;
+  height: 50px;
+}
+
+.friends_image a {
+  text-align: center;
+}
+
+.friends_name {}
+
+.my_friends_online {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.usercontent {
+  width: 50%;
+  min-height: 500px;
+  margin-left: 15px;
+}
+
+.profile_header {
+  background-color: white;
+  margin-top: 20px;
+  padding: 15px;
+}
+
+.table_key {
+  color: grey;
+}
+
+.table_value {
+  color: darkblue;
+}
+
+.more_detail {
+  color: darkblue;
+  text-align: center;
+}
+
+.my_photoes {
+  background-color: white;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.photo_from_gallery {
+  width: 100%;
+}
+
+.whatisnew {
+  background-color: white;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.whatisnew input {
+  border: 0px;
+}
+
+.my_news {
+  background-color: white;
+  margin-top: 20px;
+  min-height: 300px;
+}

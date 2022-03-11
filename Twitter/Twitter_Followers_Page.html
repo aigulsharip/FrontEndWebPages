@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Twitter Followers</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="style_twitter.css">
+  <link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css">
+
+</head>
+
+<body onload="renderNewTable(); renderNewFollowerTable();">
+  <div class="main">
+    <div class="header" style="background-color:white;">
+      <nav class="navbar bg-white navbar-light">
+        <div class="container-fluid">
+          <a href="#"><i class="fab fa-twitter" style="font-size: 35px; "></i></a>
+          <a class="navbar-brand fw-bold">Followers</a>
+          <a href="#"></a>
+          <a href="#"></a>
+          <a href="#"></a>
+          <form class="d-flex">
+            <input class="form-control me-2 rounded-pill bg-light" type="search" placeholder="Search Twitter" aria-label="Search">
+          </form>
+        </div>
+      </nav>
+    </div>
+
+    <div class="content">
+      <div class="row mt-1" style="min-height:500px;">
+        <div class="col-md-2" style="">
+          <div class="sidebar">
+            <table class="table fs-5">
+              <tr>
+                <td>
+                  <i class="fas fa-home"></i> <a class="text-decoration-none text-reset" href="Twitter_Home_Page.html">Home</a>
+                </td>
+              </tr>
+              <tr>
+                <td> <i class="fas fa-hashtag"></i> Explore</td>
+              </tr>
+              <tr>
+                <td> <i class="fas fa-bell"></i> Notifications</td>
+              </tr>
+              <tr>
+                <td class="fw-bold">
+                  <i class="fas fa-user-friends"></i> <a class="text-decoration-none text-reset" href="Twitter_Followers_Page.html">Followers</a>
+                </td>
+              </tr>
+              <tr>
+                <td><i class="far fa-envelope"></i> Messages</td>
+              </tr>
+              <tr>
+                <td><i class="far fa-bookmark"></i> Bookmarks</td>
+              </tr>
+              <tr>
+                <td><i class="fas fa-list"></i> Lists</td>
+              </tr>
+              <tr>
+                <td><i class="fas fa-user-alt"></i> Profile</td>
+              </tr>
+              <tr>
+                <td><i class="fas fa-comment-dots"></i> More</td>
+              </tr>
+              <tr>
+                <td>
+                  <button class="btn btn-primary rounded-pill form-control" type="button" name="button">Tweet</button>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="col-md-6" style="">
+          <div class="container mt-3">
+            <div class="row">
+              <div class="col-12">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" onclick="showAddFollowerModal()">
+                  + Add New Follower
+                </button>
+                <div class="modal fade" id="addFollowerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel"> Search for followers</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="row">
+                          <div class="col-12">
+                            <label>NAME :</label>
+                          </div>
+                        </div>
+                        <div class="row mt-2">
+                          <div class="col-12">
+                            <input type="text" class="form-control" id="user_name">
+                          </div>
+                        </div>
+                        <div class="row mt-2">
+                          <div class="col-12">
+                            <label>SURNAME :</label>
+                          </div>
+                        </div>
+                        <div class="row mt-2">
+                          <div class="col-12">
+                            <input type="text" class="form-control" id="user_surname">
+                          </div>
+                        </div>
+                        <div class="row mt-2">
+                          <div class="col-12">
+                            <label> USERNAME:</label>
+                          </div>
+                        </div>
+                        <div class="row mt-2">
+                          <div class="col-12">
+                            <input type="text" class="form-control" id="user_username">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" onclick="addFollewer()"> Add Users</button>
+                        <button type="button" class="btn btn-success" onclick="searchFollewer()"> Search New Followers</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="row mt-3">
+              <h3>My followers</h3>
+              <div class="col-12">
+                <table class="table table-hover bg-white rounded-start" style="border: 0px;">
+                  <tr>
+                    <th>PHOTO</th>
+                    <th>NAME AND USERNAME</th>
+                    <th>FOLLOW</th>
+                  </tr>
+                  <tbody id="followers">
+
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+
+            <div class="row mt-3">
+              <h3>All Users</h3>
+              <div class="col-12">
+                <table class="table table-hover bg-white rounded-start" style="border: 0px;">
+                  <tr>
+                    <th>PHOTO</th>
+                    <th>NAME AND USERNAME</th>
+                    <th>FOLLOW</th>
+                  </tr>
+                  <tbody id="newTableID">
+
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+
+
+        <div class="col-md-4" style="">
+          <div class="trends">
+            <div class="card border-0">
+              <div class="card-body">
+                <table class="table table-hover bg-light rounded-start" style="border: 0px;">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <h4 class="card-title fw-bold">Trends for you</h4>
+                      </td>
+                      <td class="text-end"><i class="fas fa-cog"></i></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p class="m-0"><small class="text-muted">Trending in Kazakhstan</small></p>
+                        <p class="fw-bold m-0">Christmas</p>
+                        <p class="m-0"><small class="text-muted">2.85M Tweets</small></p>
+                      </td>
+                      <td class="text-end"><i class="fas fa-ellipsis-h"></i></td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <p class="m-0"><small class="text-muted">Trending in Kazakhstan</small></p>
+                        <p class="fw-bold m-0">Christmas</p>
+                        <p class="m-0"><small class="text-muted">2.85M Tweets</small></p>
+                      </td>
+                      <td class="text-end"><i class="fas fa-ellipsis-h"></i></td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <p class="m-0"><small class="text-muted">Trending in Kazakhstan</small></p>
+                        <p class="fw-bold m-0">Police Department</p>
+                        <p class="m-0"><small class="text-muted">5,443 Tweets</small></p>
+                      </td>
+                      <td class="text-end"><i class="fas fa-ellipsis-h"></i></td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <p class="m-0"><small class="text-muted">Trending in Kazakhstan</small></p>
+                        <p class="fw-bold m-0">Kazakhstan</p>
+                        <p class="m-0"><small class="text-muted">333 Tweets</small></p>
+                      </td>
+                      <td class="text-end"><i class="fas fa-ellipsis-h"></i></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="potential followers">
+            <div class="card border-0">
+              <div class="card-body">
+                <table class="table table-hover bg-light rounded-start" style="border: 0px;">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <h5 class="fw-bold">Who to follow</h5>
+                      </td>
+                    </tr>
+                    <tr class="m-3">
+                      <td class="p-1 m-1 text-center">
+                        <img class="rounded-pill px-0 mx-0" width="40%" src="https://pbs.twimg.com/profile_images/1356520420686655490/zgNB3Ir9_bigger.jpg" alt="">
+                      </td>
+                      <td class="p-1 m-1 text-start">
+                        <p class="fw-bold m-0">Sputnik V</p>
+                        <p class="m-0"><small class="text-muted">@sputnikvaccine</small></p>
+                      </td>
+                      <td class="text-end">
+                        <button type="button" class="btn btn-dark" name="button">Follow</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="p-1 m-1 text-center">
+                        <img class="rounded-pill px-0 mx-0" src="https://pbs.twimg.com/profile_images/1368994790772203523/QW3TyAVz_bigger.jpg" alt="" width="40%">
+                      </td>
+                      <td class="p-1 m-1 text-start">
+                        <p class="fw-bold m-0">Selena Gomes </p>
+                        <p class="m-0"><small class="text-muted">@selenagomez</small></p>
+                      </td>
+                      <td class="text-end">
+                        <button type="button" class="btn btn-dark" name="button">Follow</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="p-1 m-1 text-center">
+                        <img class="rounded-pill px-0 mx-0" src="https://pbs.twimg.com/profile_images/1473367072130404354/Fit9lnmF_200x200.jpg" alt="" width="40%">
+                      </td>
+                      <td class="p-1 m-1 text-start">
+                        <p class="fw-bold m-0">Snoop Dog </p>
+                        <p class="m-0"><small class="text-muted">@snoopdogg</small></p>
+                      </td>
+                      <td class="text-end">
+                        <button type="button" class="btn btn-dark" name="button">Follow</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="script_twitter.js"> </script>
+
+</body>
+
+</html>
